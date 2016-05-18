@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/html_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="username"/>
+
+    <TextView
+        android:id="@+id/html_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="password"/>
+
+    <Button
+        android:id="@+id/html_get"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="get方法获取"/>
+
+    <Button
+        android:id="@+id/html_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="post方法获取"/>
+
+</LinearLayout>

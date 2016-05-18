@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.zhaoxu.study.MainActivity">
+
+    <ImageView
+        android:id="@+id/image_internet"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <EditText
+            android:id="@+id/ed_internet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:text="http://hbimg.b0.upaiyun.com/d5a196ac8d1a2c7aa0b108bc835063f0789006dc1a453-Q2tHCt_fw658"/>
+
+        <Button
+            android:id="@+id/btn_internet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="获取图片"/>
+
+    </LinearLayout>
+</LinearLayout>

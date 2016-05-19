@@ -3,13 +3,13 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <EditText
         android:id="@+id/html_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="username"/>
 
-    <TextView
+    <EditText
         android:id="@+id/html_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

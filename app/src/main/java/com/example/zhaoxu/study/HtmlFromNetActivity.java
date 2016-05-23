@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.zhaoxu.study.Activity.R;
 import com.example.zhaoxu.study.netUtils.HtmlNetUtils;
 
 /**

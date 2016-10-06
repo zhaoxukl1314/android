@@ -4,32 +4,37 @@ import android.app.Activity;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.os.Message;
+import android.view.SurfaceHolder;
+import android.view.SurfaceView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import java.io.File;
-import java.io.IOException;
 
 /**
  * Created by Administrator on 2016/6/14.
  */
-public class MusicPlayerActivity extends Activity {
+public class VideoPlayerActivity extends Activity {
 
     private EditText editText;
     private MediaPlayer mediaPlayer;
     private Button musicPlay;
     private Button musicPause;
+    private SurfaceView surfaceView;
+    private SurfaceHolder holder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.music_player);
+        setContentView(R.layout.video_player);
         editText = (EditText) findViewById(R.id.music_edt);
         musicPlay = (Button) findViewById(R.id.music_play);
         musicPause = (Button) findViewById(R.id.music_pause);
+        surfaceView = (SurfaceView) findViewById(R.id.video_surface);
+        holder = surfaceView.getHolder();
+        holder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
     }
 
     public void play(View view) {
@@ -40,6 +45,7 @@ public class MusicPlayerActivity extends Activity {
             try {
                 mediaPlayer.setDataSource(path);
                 mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+                mediaPlayer.setDisplay(holder);
                 mediaPlayer.prepare();
                 mediaPlayer.start();
                 musicPlay.setEnabled(false);
